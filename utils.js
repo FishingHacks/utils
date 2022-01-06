@@ -105,8 +105,10 @@ let logFunctions = {
 };
 
 function forEach(obj, func) {
+  let i = 0;
   for (el in obj) {
-    func(obj[el], el);
+    func(obj[el], el, i, obj);
+    i++;
   }
 }
 
